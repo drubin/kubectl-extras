@@ -1,0 +1,11 @@
+name: "view-secret"
+shortDesc: "Decode secrets"
+longDesc: >
+  Decodes secrets. If there's only one key in the secret, it's printed.
+  If there are multiple keys in the secret, it prints the keys and exits.
+  In that case, specify the data key in the secret as another argument.
+  Example:
+    kubectl plugin view-secret foo
+    kubectl plugin view-secret foo key.json
+    kubectl plugin view-secret foo key.json namespace
+command: ./view-secret.py
